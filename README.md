@@ -94,7 +94,7 @@ Now, when your UserParam class has accountNumber with value "abcde" then it will
 SELECT ... FROM `user` WHERE user.account_number=? with ? is equal to 'abcde'
 ```
 
-What if the we have accountNumbers instead of accountNumber? Then, it will make a query
+What if we have accountNumbers instead of accountNumber? Then, it will make a query
 ```
 SELECT ... FROM `user` WHERE user.account_number IN ? with ? is equal to 'abcde'
 ```
