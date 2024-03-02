@@ -16,6 +16,9 @@ import java.time.temporal.ChronoUnit;
 @Setter
 @Getter
 @Slf4j
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class HttpResponse {
 
     private HttpMessage metadata;
@@ -27,6 +30,7 @@ public class HttpResponse {
     @Builder
     @Setter
     @Getter
+    @ToString
     static class HttpMessage{
         private String title;
         private String message;
@@ -37,6 +41,7 @@ public class HttpResponse {
     @Builder
     @Setter
     @Getter
+    @ToString
     static class Meta{
         private String path;
         @JsonFormat(shape = JsonFormat.Shape.STRING)
@@ -60,6 +65,7 @@ public class HttpResponse {
     @Builder
     @Setter
     @Getter
+    @ToString
     public static class PaginationParam{
         private Long offset;
         private Integer limit;
@@ -69,6 +75,7 @@ public class HttpResponse {
     @Builder
     @Setter
     @Getter
+    @ToString
     public static class QueryParam{
 
         private Sort sort;

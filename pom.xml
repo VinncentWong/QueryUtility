@@ -18,7 +18,7 @@
         <repository>
             <id>github</id>
             <name>Github CentWong Projects</name>
-            <url>https://maven.pkg.github.com/afikri-code/QueryUtility</url>
+            <url>https://maven.pkg.github.com/VinncentWong/QueryUtility</url>
         </repository>
     </distributionManagement>
 
