@@ -31,6 +31,8 @@ public class HttpResponse {
     @Setter
     @Getter
     @ToString
+    @NoArgsConstructor
+    @AllArgsConstructor
     static class HttpMessage{
         private String title;
         private String message;
@@ -42,6 +44,8 @@ public class HttpResponse {
     @Setter
     @Getter
     @ToString
+    @NoArgsConstructor
+    @AllArgsConstructor
     static class Meta{
         private String path;
         @JsonFormat(shape = JsonFormat.Shape.STRING)
@@ -55,6 +59,8 @@ public class HttpResponse {
     @Setter
     @Getter
     @ToString
+    @NoArgsConstructor
+    @AllArgsConstructor
     public static class Pagination{
         private Long currentPage;
         private Long currentElements;
@@ -76,6 +82,8 @@ public class HttpResponse {
     @Setter
     @Getter
     @ToString
+    @NoArgsConstructor
+    @AllArgsConstructor
     public static class QueryParam{
 
         private Sort sort;
@@ -83,6 +91,8 @@ public class HttpResponse {
         @Builder
         @Setter
         @Getter
+        @NoArgsConstructor
+        @AllArgsConstructor
         public static class Sort{
             private String columnName;
             private SortPosition position;
