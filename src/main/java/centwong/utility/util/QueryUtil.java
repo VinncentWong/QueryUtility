@@ -73,6 +73,9 @@ public class QueryUtil {
             typedQuery = em.createQuery(res.query)
                     .setFirstResult(offset)
                     .setMaxResults(limit);
+        } else if(limit != -1){
+            typedQuery = em.createQuery(res.query)
+                    .setMaxResults(limit);
         } else {
             typedQuery = em.createQuery(res.getQuery());
         }
@@ -140,6 +143,8 @@ public class QueryUtil {
                     if (pgParam.getOffset() != null && pgParam.getLimit() != null) {
                         limit = pgParam.getLimit();
                         offset = pgParam.getOffset().intValue();
+                    } else if(pgParam.getLimit() != null){
+                        limit = pgParam.getLimit();
                     }
 
                     var pgParamParam = pgParam.getParam();
